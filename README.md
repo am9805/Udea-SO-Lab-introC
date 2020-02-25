@@ -1,6 +1,11 @@
 # Actividades de entrega de los laboratorios
 
-## Pasos previos
+## Integrantes
+
+## Juan Esteban Marín Grajales 
+## Angélica Arroyave Mendoza 
+
+## Pasos previos 
 
 Inicialmente antes de empezar este laboratorio haga un **fork**. Luego descarguelo trabajelo localmente y luego actualice su repositorio con la solución. El enlace de este sera el enviado como solución del laboratorio.
 
