@@ -15,12 +15,12 @@ int main()
   scanf("%d", &ejecucion);
   while (ejecucion == 1)
   {
-    int esCorrecto = 1;
+    int esCorrecto = 0;
     int userResult;
-    int a = generar_multiplos_aleatorios();
-    int b = generar_multiplos_aleatorios();
+    int a = generar_multiplos_aleatorios(2, 10);
+    int b = generar_multiplos_aleatorios(2, 10);
     int resultadoReal = multiplicacion(a, b);
-    while (esCorrecto == 1)
+    while (esCorrecto == 0)
     {
       printf("Cuanto es %d veces %d\n", a, b);
       scanf("%d", &userResult);
@@ -33,12 +33,12 @@ int main()
   return 0;
 }
 
-int generar_multiplos_aleatorios()
+int generar_multiplos_aleatorios(int limite, int mayor)
 {
   int cnt = 0, num, M, m;
-  M = 10;
+  M = mayor;
   m = 1;
-  for (int i = 0; i < 2; i++)
+  for (int i = 0; i < limite; i++)
   {
     num = rand() % (M - m + 1) + m;
     if (num % 2 == 0)
@@ -63,12 +63,12 @@ int validarResultado(int resultadoU, int realResultado)
   if (resultadoU == realResultado)
   {
     printf("Muy bien!\n");
-    codigo = 0;
+    codigo = 1;
   }
   else
   {
     printf("No. Por favor intenta nuevamente\n");
-    codigo = 1;
+    codigo = 0;
   }
 
   return codigo;
